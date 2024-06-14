@@ -4,9 +4,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: '/chess-game/',
-  server: {
-    fs: {
-      strict: false,
-    },
+  build: {
+    outDir: 'dist',
   },
 });
