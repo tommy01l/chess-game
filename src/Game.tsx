@@ -31,16 +31,16 @@ const Game = () => {
   }
 
 
-  function onePiece() {
-    const startPosition = ["wq1"]
-    let newState = Array(64).fill(null)
+  // function onePiece() {
+  //   const startPosition = ["wq1"]
+  //   let newState = Array(64).fill(null)
 
-    startPosition.forEach((val: string) => {
-      newState[+(val.slice(2))] = val.slice(0, 2);
-    })
-    setGameState(newState)
-    setWhiteTurn(true)
-  };
+  //   startPosition.forEach((val: string) => {
+  //     newState[+(val.slice(2))] = val.slice(0, 2);
+  //   })
+  //   setGameState(newState)
+  //   setWhiteTurn(true)
+  // };
 
   return (
     <>
