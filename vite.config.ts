@@ -5,4 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/chess-game/',
-})
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
+  },
+  build: {
+    assetsDir: 'assets',
+    outDir: 'dist',
+    manifest: true,
+  },
+});
