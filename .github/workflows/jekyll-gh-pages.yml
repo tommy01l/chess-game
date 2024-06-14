@@ -33,7 +33,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 16  # Corrected Node.js version
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
@@ -42,10 +42,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v2  # Adjusted action for uploading artifacts
         with:
           # Upload dist folder
-          path: './dist'
+          name: dist
+          path: ./dist
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
